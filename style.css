@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.container{
+    width: 200px;
+    height: 400px;
+    padding-top:15px; 
+    margin: 6rem auto 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px 5px #0000005c;
+}
+
+.num{
+    position: relative;
+    width: 100px;
+    height: 310px;
+    margin: 15% auto;
+}
+
+.cell-container-1,.cell-container-2,.cell-container-3,.cell-container-4,.cell-container-5,.cell-container-6,.cell-container-7{
+    position: absolute;
+    transition: 1s cubic-bezier(0.68, 0.07, 0.26, 0.83);
+}
+
+.cell{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    background-color: #5f5454;
+    box-shadow:1px 1px 8px 0px #0000005c;
+}
+
+.cell::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #5f5454;
+    border-bottom: 15px solid transparent;
+    right: -15px;
+    position: absolute;
+    
+}
+
+.cell::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 15px solid #5f5454;
+    border-bottom: 15px solid transparent;
+    left: -15px;
+    position: absolute;
+}
+.cell-container-2{
+    transform: rotate(90deg);
+    top: 70px;
+    right: 65px;
+}
+.cell-container-3{
+    transform: rotate(90deg);
+    top: 70px;
+    left: 65px;
+}
+.cell-container-4{
+    top:140px;
+}
+.cell-container-5{
+    transform: rotate(90deg);
+    top: 210px;
+    right: 65px;
+}
+.cell-container-6{
+    transform: rotate(90deg);
+    top: 210px;
+    left: 65px;
+}
+.cell-container-7{
+    top:280px;
+}
+
+/* animation classes */
+.cell-container-1-left{
+    transform: rotatez(90deg) translate(70px, 65px);
+}
+.cell-container-1-right{
+    transform: rotatez(90deg) translate(70px, -65px);
+}
+
+
+.cell-container-2-up{
+    transform: rotateZ(0deg) translate(65px, -70px);
+}
+.cell-container-2-right{
+    transform: rotate(90deg) translateY(-130px);
+}
+
+
+.cell-container-3-left{
+    transform: rotate(90deg) translateY(130px);
+}
+
+
+.cell-container-4-left{
+    transform: rotatez(90deg) translate(70px, 65px);
+}
+
+.cell-container-4-right{
+    transform: rotatez(90deg) translate(70px, -65px);
+}
+
+
+.cell-container-5-up{
+    transform: rotateZ(0deg) translate(65px, -70px);
+}
+.cell-container-5-right{
+    transform: rotate(90deg) translateY(-130px);
+}
+
+.cell-container-6-left{
+    transform: rotate(90deg) translateY(130px);
+}
+
+.cell-container-7-right{
+        transform: rotateZ(90deg) translate(-70px, -65px);
+}
+.cell-container-7-left{
+        transform: rotateZ(90deg) translate(-70px, 65px);
+}
